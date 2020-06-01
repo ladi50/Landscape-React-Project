@@ -1,0 +1,170 @@
+/*Style the desktop menu*/
+
+.navbar {
+	position: sticky;
+	top: 0;
+	margin-top: 0;
+	width: 100%;
+	background-color: #43BEDE;
+	height: 70px;
+	z-index: 999;
+}
+
+.navbar-links {
+	width: 100%;
+	height: 100%;
+	text-align: right;
+	list-style-type: none;
+	font-size: 1.2rem;
+	display: inline-block;
+	margin-top: 0;
+	padding-left: 0px;
+	overflow: hidden;
+}
+
+#links {
+	height: 100%;
+	display: block;
+}
+
+li {
+	float: left;
+	display: inline-block;
+	height: 100%;
+}
+
+.right {
+	float: right;
+	transition: background-color 0.4s ease-out;
+	font-family: 'Poppins', sans-serif;
+	display: inline-block;
+}
+
+.right:hover {
+	background-color: #24AACD;
+}
+
+.right a:hover {
+	color: white;
+}
+
+a {
+	padding: 18px 20px 0 20px;
+	display: inline-block;
+	text-decoration-line: none;
+	height: 100%;
+}
+
+.home-link {
+	padding-left: 0;
+	font-size: 1.5rem;
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	transition: background-color 0.4s ease-out, color 0.6s ease-in;
+}
+
+.home-link:hover {
+	background-color: #F3F4E1;
+	color: #901231;
+}
+
+.logo {
+	float: left;
+	position: relative;
+	top: -10px;
+	width: 50px;
+	height: 50px;
+	padding-right: 8px;
+	padding-left: 4px;
+}
+
+.burger {
+	display: none;
+}
+
+@media (max-width: 750px) {
+	a {
+		font-size: 17px;
+		padding: 20px 18px;
+	}
+}
+
+@media (min-width: 601px) {
+	.navbar-mobile, .navbar-mobile a {
+		display: none !important;
+	}
+}
+
+@media (max-width: 600px) {
+	.right {
+		display: none;
+	}
+
+	.burger {
+		display: block;
+		cursor: pointer;
+	}
+
+	/*Style the mobile menu*/
+
+	.navbar-mobile {
+		background-color: #24AACD;
+		text-align: center;
+		z-index: 999;
+		transition: height 1s ease-out;
+		animation-name: showMenu;
+		display: none;
+		position: sticky;
+		top: 70px;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+		animation-fill-mode: forwards;
+		animation-direction: normal;
+	}
+
+	@keyframes showMenu {
+		0% {height: 0;}
+		100% {height: 60px;}
+	}
+
+	.navbar-mobile-reverse {
+		background-color: #24AACD;
+		text-align: center;
+		position: sticky;
+		top: 0;
+		z-index: 998;
+		transition: height 1s ease-out, top 3.5s ease-out;
+		animation-name: hideMenu;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+		animation-fill-mode: forwards;
+		animation-direction: normal;
+	}
+
+	@keyframes hideMenu {
+		0% {height: 60px;}
+		100% {height: 0;}
+	}
+
+	.navbar-mobile a {
+		height: 100%;
+		font-family: 'Poppins', sans-serif;
+		float: left;
+		padding: 18px 20px 0;
+		width: 100%;
+		box-sizing: border-box;
+		display: block;
+		animation-duration: 0.5s;
+		transition: background-color 0.4s ease-out;
+	}
+
+	.navbar-mobile a:hover {
+		color: white;
+		background-color: #0B5774;
+	}
+}
+
+.activeLink {
+	background-color: #0B5774;
+	color: white;
+}

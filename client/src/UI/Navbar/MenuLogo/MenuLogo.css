@@ -1,0 +1,13 @@
+.outer-div {
+	height: 100%;
+	width: 75px;
+	padding-top: 18px;
+}
+
+.outer-div div {
+	border-radius: 60px;
+	background-color: #191B1F;
+	height: 4px;
+	width: 32px;
+	margin: 5px auto;
+}

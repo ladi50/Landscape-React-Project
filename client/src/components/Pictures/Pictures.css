@@ -1,0 +1,39 @@
+div#pic-div {
+	text-align: center;
+	margin: auto;
+}
+
+a#uploadButton {
+	padding: 10px;
+	width: 30%;
+	height: 20px;
+	margin: 24px auto 0;
+	border-radius: 8px;
+	letter-spacing: 2px;
+	font-size: 14px;
+	background-color: #22A4C2;
+	border: 2px solid #0B5774;
+	color: white;
+	font-weight: bold;
+	outline: none;
+	cursor: pointer;
+	transition: margin-top box-shadow linear;
+	box-shadow: 2px 3px 2px gray;
+	display: block;
+}
+
+a#uploadButton:active {
+	margin-top: 30px;
+	box-shadow: 0 0 gray;
+	background-color: #0B5774;
+}
+
+a#uploadButton:hover {
+	background-color: #338294;
+}
+
+@media (min-width: 990px) {
+	a#uploadButton {
+		width: 316px;
+	}
+}

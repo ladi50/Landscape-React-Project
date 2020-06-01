@@ -1,0 +1,101 @@
+div#pics-div {
+	display: inline-block;
+	margin: 30px 8px 0;
+	position: relative;
+}
+
+a.pic-link {
+	padding: 0;
+	margin: 0;
+}
+
+img.pic-img {
+	width: 390px;
+	height: 240px;
+	float: left;
+	margin-bottom: -3px;
+}
+
+img.pic-img:hover {
+	outline: 3px solid blue;
+	cursor: pointer;
+}
+
+h3.pic-title {
+	margin: 0 0 4px 0;
+	font-size: 24px;
+}
+
+#icons-bar {
+	position: absolute;
+	bottom: 0;
+	left: 50%;	
+	transform: translateX(-50%);
+	width: 100%;
+	height: 0;
+	background-color: rgba(70, 68, 68, 0.75);
+	transition: height 0.5s linear, padding 0.5s linear;
+}
+
+.icons {
+	display: none;
+	width: 33.3%;
+	padding-bottom: -5px;
+	height: 100%;
+}
+
+#heart {
+	margin-right: 14px;
+	height: 100%;
+	cursor: pointer;
+}
+
+#heart:hover {
+	background: url("/images/heart2.png");
+}
+
+
+#like {
+	background: url("/images/like.png");
+	margin-right: 14px;
+	height: 100%;
+	cursor: pointer;
+}
+
+#like:hover {
+	background: url("/images/like2.png");
+}
+
+#views {
+	margin-right: 14px;
+	height: 100%;
+}
+
+.number {
+	margin-bottom: 10px;
+	position: absolute;
+	height: 24px;
+	color: darkgray;
+}
+
+@media (max-width: 980px) {
+	h3.pic-title {
+		font-size: 18px;
+	}
+
+	img.pic-img {
+		width: 360px;
+		height: 210px;
+	}
+}
+
+@media (max-width: 600px) {
+	h3.pic-title {
+		font-size: 16px;
+	}
+
+	img.pic-img {
+		width: 330px;
+		height: 180px;
+	}
+}
